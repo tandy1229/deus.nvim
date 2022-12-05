@@ -156,7 +156,7 @@ local highlight_groups = {
 	Underlined = { fg = blue, style = "underline" },
 	Ignore = "deusPurple",
 	Error = { fg = red, bg = bg2, style = { "bold", "inverse" } },
-	Todo = { fg = fg1, bg = bg2, style = { "bold", "inverse" } },
+	Todo = { fg = yellow, bg = bg2, style = { "bold", "inverse" } },
 	Hint = { fg = tandymagenta, bg = bg2, style = { "bold", "inverse" } },
 	Info = { fg = aqua, bg = bg2, style = { "bold", "inverse" } },
 	Warning = { fg = orange, bg = bg2, style = { "bold", "inverse" } },
@@ -202,7 +202,7 @@ local highlight_groups = {
 	PmenuSbar = { bg = bg2 },
 	PmenuSel = { fg = bg2, bg = blue, style = "bold" },
 	PmenuThumb = { bg = bg4 },
-	WildMenu = { fg = tandypurple, bg = bg2, style = "bold" },
+	WildMenu = { fg = tandypurple, bg = bg2, style = {"bold", "inverse"} },
 	-- WildMenu = "PmenuSel",
 
 	--[[ 4.2.5. Folds]]
@@ -218,7 +218,7 @@ local highlight_groups = {
 	--[[ 4.2.7. Searching]]
 	IncSearch = { style = "inverse" },
 	MatchParen = { bg = bg3, style = { "bold", "underline" } },
-	Search = { style = { "underline", color = white } },
+	Search = { fg = bg0, bg = yellow, style = { "underline", color = white } },
 
 	--[[ 4.2.8. Spelling]]
 	SpellBad = { style = { "undercurl", color = red } },
