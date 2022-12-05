@@ -218,7 +218,7 @@ local highlight_groups = {
 	--[[ 4.2.7. Searching]]
 	IncSearch = { style = "inverse" },
 	MatchParen = { bg = bg3, style = { "bold", "underline" } },
-	Search = { fg = bg0, bg = yellow, style = { "underline", color = white } },
+	Search = { fg = bg0, bg = tandypurple, style = { "underline", color = white } },
 
 	--[[ 4.2.8. Spelling]]
 	SpellBad = { style = { "undercurl", color = red } },
