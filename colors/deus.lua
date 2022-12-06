@@ -684,7 +684,7 @@ local highlight_groups = {
 	--[[ 4.4.2. coc.nvim ]]
 	CocErrorHighlight = { style = { "undercurl", color = red } },
 	CocHintHighlight = { style = { "undercurl", color = purple } },
-	CocInfoHighlight = { style = { "undercurl", color = dsdark4 } },
+	CocInfoHighlight = { style = { "undercurl", color = green } },
 	CocWarningHighlight = { style = { "undercurl", color = orange } },
 	CocErrorSign = "ErrorMsg",
 	CocHintSign = "HintMsg",
