@@ -231,7 +231,7 @@ local highlight_groups = {
 	SignColumn = { fg = bg2 },
 
 	--[[ 4.2.10. Messages]]
-	ErrorMsg = { fg = red, bg = bg1, style = "bold" },
+	ErrorMsg = { fg = red, style = "bold" },
 	HintMsg = { fg = tandymagenta, style = "bold" },
 	InfoMsg = { fg = aqua, style = "bold" },
 	ModeMsg = "deusYellowBold",
@@ -683,7 +683,7 @@ local highlight_groups = {
 
 	--[[ 4.4.2. coc.nvim ]]
 	CocErrorHighlight = { style = { "undercurl", color = red } },
-	CocHintHighlight = { style = { "undercurl", color = purple } },
+	CocHintHighlight = { style = { "undercurl", color = tandymagenta } },
 	CocInfoHighlight = { style = { "undercurl", color = green } },
 	CocWarningHighlight = { style = { "undercurl", color = orange } },
 	CocErrorSign = "ErrorMsg",
