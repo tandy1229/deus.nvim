@@ -933,17 +933,17 @@ local highlight_groups = {
 		return { fg = black, bg = self.ErrorMsg.fg, style = { "bold", "italic", "nocombine" } }
 	end,
 	TodoBgHACK = function(self)
-		return { fg = black, bg = self.Todo.bg, style = { "bold", "italic", "nocombine" } }
+		return { fg = black, bg = self.Todo.fg, style = { "bold", "italic", "nocombine" } }
 	end,
 	TodoBgNOTE = function(self)
-		return { fg = black, bg = self.Hint.bg, style = { "bold", "italic", "nocombine" } }
+		return { fg = black, bg = self.Hint.fg, style = { "bold", "italic", "nocombine" } }
 	end,
 	TodoBgPERF = function(self)
-		return { fg = black, bg = self.Info.bg, style = { "bold", "italic", "nocombine" } }
+		return { fg = black, bg = self.Info.fg, style = { "bold", "italic", "nocombine" } }
 	end,
 	TodoBgTODO = { fg = black, bg = blue, style = { "bold", "italic", "nocombine" } },
 	TodoBgWARN = function(self)
-		return { fg = black, bg = self.Warning.bg, style = { "bold", "italic", "nocombine" } }
+		return { fg = black, bg = self.Warning.fg, style = { "bold", "italic", "nocombine" } }
 	end,
 
 	TodoSignFIX = "TodoFgFIX",
