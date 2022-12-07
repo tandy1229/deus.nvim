@@ -1040,9 +1040,9 @@ local highlight_groups = {
 	rainbowcol1 = { fg = red },
 	rainbowcol2 = { fg = fg0 },
 	rainbowcol3 = { fg = yellow },
-	rainbowcol4 = { fg = green },
-	rainbowcol5 = { fg = purple },
-	rainbowcol6 = { fg = blue },
+	rainbowcol4 = { fg = tandyice },
+	rainbowcol5 = { fg = terminal_color_12 },
+	rainbowcol6 = { fg = terminal_color_10 },
 	rainbowcol7 = { fg = orange },
 }
 
