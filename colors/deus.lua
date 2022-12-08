@@ -144,7 +144,7 @@ local highlight_groups = {
 	Typedef = "deusYellow",
 
 	--[[ 4.1.6. Edge Cases]]
-	Special = { fg = orange, style = "italic"},
+	Special = { fg = orange, style = "italic" },
 	SpecialChar = "deusOrange",
 	SpecialKey = "deusOrange",
 	Tag = "Underlined",
@@ -1037,13 +1037,13 @@ local highlight_groups = {
 	StatusLineWarning = "StatusLineHunkChange",
 
 	--[[ 4.4.22 nvim-ts-rainbow ]]
-	rainbowcol1 = { fg = red, style = {"bold", "nocombine"} },
-	rainbowcol2 = { fg = fg0, style = {"bold", "nocombine"} },
-	rainbowcol3 = { fg = yellow, style = {"bold", "nocombine"} },
-	rainbowcol4 = { fg = tandyice, style = {"bold", "nocombine"} },
-	rainbowcol5 = { fg = terminal_color_12, style = {"bold", "nocombine"} },
-	rainbowcol6 = { fg = terminal_color_10, style = {"bold", "nocombine"} },
-	rainbowcol7 = { fg = orange, style = {"bold", "nocombine"} },
+	rainbowcol1 = { fg = red, style = { "bold", "nocombine" } },
+	rainbowcol2 = { fg = fg0, style = { "bold", "nocombine" } },
+	rainbowcol3 = { fg = yellow, style = { "bold", "nocombine" } },
+	rainbowcol4 = { fg = tandyice, style = { "bold", "nocombine" } },
+	rainbowcol5 = { fg = terminal_color_12, style = { "bold", "nocombine" } },
+	rainbowcol6 = { fg = terminal_color_10, style = { "bold", "nocombine" } },
+	rainbowcol7 = { fg = orange, style = { "bold", "nocombine" } },
 }
 
 local terminal_colors = {
