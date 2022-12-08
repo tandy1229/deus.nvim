@@ -202,7 +202,7 @@ local highlight_groups = {
 	PmenuSbar = { bg = bg2 },
 	PmenuSel = { fg = bg2, bg = blue, style = "bold" },
 	PmenuThumb = { bg = bg4 },
-	WildMenu = { fg = tandypurple, bg = bg2, style = {"bold", "inverse"} },
+	WildMenu = { fg = tandypurple, bg = bg2, style = { "bold", "inverse" } },
 	-- WildMenu = "PmenuSel",
 
 	--[[ 4.2.5. Folds]]
@@ -843,7 +843,7 @@ local highlight_groups = {
 		return { fg = self.WarningMsg.fg, bg = self.BufferCurrent.bg }
 	end,
 
-	BufferInactive = "BufferVisible",
+	BufferInactive = { fg = fg4, bg = bg2 },
 	BufferInactiveERROR = function(self)
 		return { fg = self.ErrorMsg.fg, bg = self.BufferInactive.bg }
 	end,
@@ -1023,7 +1023,7 @@ local highlight_groups = {
 	StatusLineReplace = { fg = dsdark0, bg = red, style = "bold" },
 	StatusLineCommand = { fg = dsdark0, bg = green, style = "bold" },
 	StatusLineTerminal = { fg = dsdark0, bg = tandyice, style = "bold" },
-	StatusLineBranch = { fg = tandyblue, bg = dsdark2 },
+	StatusLineBranch = { fg = tandyblue, bg = dsdark2, style = "bold" },
 	StatusLineHunkAdd = { fg = green, bg = dsdark2, style = "bold" },
 	StatusLineHunkChange = { fg = orange, bg = dsdark2, style = "bold" },
 	StatusLineHunkRemove = { fg = terminal_color_1, bg = dsdark2, style = "bold" },
