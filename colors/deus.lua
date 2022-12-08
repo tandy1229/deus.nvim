@@ -1037,13 +1037,13 @@ local highlight_groups = {
 	StatusLineWarning = "StatusLineHunkChange",
 
 	--[[ 4.4.22 nvim-ts-rainbow ]]
-	rainbowcol1 = { fg = red },
-	rainbowcol2 = { fg = fg0 },
-	rainbowcol3 = { fg = yellow },
-	rainbowcol4 = { fg = tandyice },
-	rainbowcol5 = { fg = terminal_color_12 },
-	rainbowcol6 = { fg = terminal_color_10 },
-	rainbowcol7 = { fg = orange },
+	rainbowcol1 = { fg = red, style = "bold" },
+	rainbowcol2 = { fg = fg0, style = "bold" },
+	rainbowcol3 = { fg = yellow, style = "bold" },
+	rainbowcol4 = { fg = tandyice, style = "bold" },
+	rainbowcol5 = { fg = terminal_color_12, style = "bold" },
+	rainbowcol6 = { fg = terminal_color_10, style = "bold" },
+	rainbowcol7 = { fg = orange, style = "bold" },
 }
 
 local terminal_colors = {
