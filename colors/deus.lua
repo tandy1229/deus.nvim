@@ -144,7 +144,7 @@ local highlight_groups = {
 	Typedef = "deusYellow",
 
 	--[[ 4.1.6. Edge Cases]]
-	Special = "deusOrange",
+	Special = { fg = orange, style = "italic"},
 	SpecialChar = "deusOrange",
 	SpecialKey = "deusOrange",
 	Tag = "Underlined",
