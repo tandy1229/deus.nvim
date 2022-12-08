@@ -79,8 +79,7 @@ function highlite.group(name)
 		end
 	end
 
-	return
-{
+	return {
 		fg = definition.foreground and tohex(definition.foreground),
 		bg = definition.background and tohex(definition.background),
 		blend = definition.blend,

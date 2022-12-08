@@ -110,7 +110,7 @@ local highlight_groups = {
 
 	--[[ 4.1.1. Literals]]
 	Constant = "deusPurple",
-	String = "deusGreen",
+	String = { fg = green, style = "italic" },
 	Character = "deusPurple",
 	Number = "deusPurple",
 	Boolean = "deusPurple",
@@ -144,7 +144,7 @@ local highlight_groups = {
 	Typedef = "deusYellow",
 
 	--[[ 4.1.6. Edge Cases]]
-	Special = "deusOrange",
+	Special = { fg = bg1, bg = orange, style = "italic" },
 	SpecialChar = "deusOrange",
 	SpecialKey = "deusOrange",
 	Tag = "Underlined",
