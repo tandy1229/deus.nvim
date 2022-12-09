@@ -126,7 +126,7 @@ local highlight_groups = {
 	Conditional = "deusRed",
 	Repeat = "deusRed",
 	Label = "deusRed",
-	Operator = { fg = fg1, bg = bg0 },
+	Operator = { fg = fg1 },
 	Keyword = "deusRed",
 	Exception = "deusRed",
 	Noise = "Delimiter",
