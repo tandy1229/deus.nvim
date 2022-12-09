@@ -768,7 +768,7 @@ local highlight_groups = {
 	["@attribute"] = "PreProc",
 	["@field"] = "Identifier",
 	["@property"] = "Identifier",
-	["@variable"] = { fg = fg1, bg = bg0 },
+	["@variable"] = { fg = fg1 },
 	["@variable.builtin"] = "Special",
 	["@constant"] = "Constant",
 	["@constant.builtin"] = "Special",
