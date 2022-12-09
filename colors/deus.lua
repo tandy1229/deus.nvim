@@ -6,6 +6,7 @@ local tandymagenta = { "#d5508f", 126, "magenta" }
 local tandypurple = { "#af87d7", 77, "magenta" }
 local tandyice = { "#75b8c7", 88, "blue" }
 local tandyblue = { "#61bff3", 137, "blue" }
+local tandygray = { "#3e3c3d", 189, "gray"}
 
 -- dracula color for terminal
 local terminal_color_0 = { "#21222C", 100, "black" }
@@ -1029,6 +1030,7 @@ local highlight_groups = {
 	StatusLineHunkRemove = { fg = terminal_color_1, bg = dsdark2, style = "bold" },
 	StatusLineFormat = { fg = blue, bg = dsdark2 },
 	StatusLineCocStatus = { fg = tandymagenta, bg = dsdark2 },
+  StatusLineFileSize = {fg = tandyice , bg = tandygray},
 	StatusLineFileModified = { fg = purple, bg = dsdark2 },
 	StatusLineFileName = { fg = tandyice, bg = dsdark2 },
 	StatusLineInformation = { fg = dslight2, bg = dsdark2, style = "bold" },
