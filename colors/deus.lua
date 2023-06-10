@@ -439,7 +439,7 @@ colorscheme.highlight_all {
 	TodoFgHACK = {fg = yellow},
 	TodoFgNOTE = function(self) return {fg = self.DiagnosticFloatingInfo.fg} end,
 	TodoFgPERF = function(self) return {fg = self.DiagnosticFloatingHint.fg} end,
-	TodoFgTODO = function(self) return {fg = self.Todo.bg} end,
+	TodoFgTODO = {fg = bright_purple},
 	TodoFgWARN = function(self) return {fg = self.DiagnosticFloatingWarn.fg} end,
 
 	TodoBgFIX = function(self) return {fg = black, bg = self.TodoFgFIX.fg, bold = true, italic = true, nocombine = true} end,
@@ -455,6 +455,13 @@ colorscheme.highlight_all {
 	TodoSignPERF = 'TodoFgPERF',
 	TodoSignTODO = 'TodoFgTODO',
 	TodoSignWARN = 'TodoFgWARN',
+
+	-- trouble.nvim
+	TroubleCount = function(self)
+		local definition = vim.deepcopy(self.Number)
+		definition.underline = true
+		return definition
+	end,
 
 	-- my statusline
 	StatusLineNormal = { fg = dsdark0, bg = tandypurple, bold = true },
