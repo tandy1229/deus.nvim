@@ -370,8 +370,8 @@ colorscheme.highlight_all {
 
   	-- nvim-cmp
 	CmpItemAbbr = 'Ignore',
-	CmpItemAbbrMatch = 'Underlined',
-	CmpItemAbbrMatchFuzzy = function(self) return {fg = self.Normal.fg, nocombine = true, underline = true} end,
+	CmpItemAbbrMatch = {fg = tandyblue, bold = true},
+	CmpItemAbbrMatchFuzzy = function(self) return {fg = self.Normal.fg, nocombine = true, bold = true} end,
 	CmpItemKindClass = 'CmpItemKindStruct',
 	CmpItemKindsp = 'Label',
 	CmpItemKindConstant = 'Constant',
@@ -383,8 +383,8 @@ colorscheme.highlight_all {
 	CmpItemKindField = 'deusYellow',
 	CmpItemKindFile = 'Directory',
 	CmpItemKindFolder = 'CmpItemKindFile',
-	CmpItemKindFunction = 'Function',
-	CmpItemKindInterface = 'Type',
+	CmpItemKindFunction = 'deusPurpleBold',
+	CmpItemKindInterface = { fg = tandymagenta },
 	CmpItemKindKeyword = 'Keyword',
 	CmpItemKindMethod = 'CmpItemKindFunction',
 	CmpItemKindModule = 'Include',
@@ -393,11 +393,12 @@ colorscheme.highlight_all {
 	CmpItemKindReference = 'StorageClass',
 	CmpItemKindSnippet = 'Special',
 	CmpItemKindStruct = 'Structure',
-	CmpItemKindText = 'Normal',
+	CmpItemKindText = 'deusGreen',
 	CmpItemKindTypeParameter = 'Typedef',
 	CmpItemKindUnit = 'CmpItemKindStruct',
 	CmpItemKindValue = 'CmpItemKindConstant',
 	CmpItemKindVariable = 'Identifier',
+	CmpItemKindColor = 'CmpItemKindInterface',
 
 	-- gitsigns.nvim
 	GitSignsAdd = 'deusGreen',
