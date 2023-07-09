@@ -172,6 +172,7 @@ colorscheme.highlight_all {
 	['@lsp.type.operator'] = '@operator',
 	['@lsp.type.string'] = '@string',
 	['@lsp.typemod.type.readonly'] = '@lsp.type.type',
+	LspInlayHint = 'Comment',
 
 	-- Treesitter
 	['@structure'] = 'Structure',
