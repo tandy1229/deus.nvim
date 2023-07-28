@@ -494,6 +494,11 @@ colorscheme.highlight_all {
 	TSRainbowGreen = { fg = terminal_color_12, bold = true, nocombine = true},
 	TSRainbowViolet = { fg = terminal_color_10, bold = true, nocombine = true},
 	TSRainbowCyan = { fg = tandypurple, bold = true, nocombine = true},
+
+	-- nvim-dap
+	DapBreakpoint = { fg = tandymagenta },
+	DapLogPoint = { fg = tandyblue },
+	DapStopped = "deusGreen",
 }
 
 
