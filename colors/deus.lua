@@ -562,17 +562,6 @@ colorscheme.highlight_all({
 
 	--[[ Plugins ]]
 
-	-- coc.nvim
-	CocErrorHighlight = "DiagnosticUnderlineError",
-	CocErrorSign = "DiagnosticSignError",
-	CocHintHighlight = "DiagnosticUnderlineHint",
-	CocHintSign = "DiagnosticSignHint",
-	CocInfoHighlight = "DiagnosticUnderlineInfo",
-	CocInfoSign = "DiagnosticSignInfo",
-	CocWarningHighlight = "DiagnosticUnderlineWarn",
-	CocWarningSign = "DiagnosticSignWarn",
-	CocUnusedHighlight = { fg = dsgray },
-
 	-- nvim-cmp
 	CmpItemAbbr = "Ignore",
 	CmpItemAbbrMatch = { fg = tandyblue, bold = true },
@@ -611,14 +600,6 @@ colorscheme.highlight_all({
 	GitSignsAdd = "deusGreen",
 	GitSignsChange = "deusYellow",
 	GitSignsDelete = "deusRed",
-
-	-- indent-blankline.nvim
-	IndentBlanklineChar = function(self)
-		local definition = vim.deepcopy(self.Whitespace)
-		definition.nocombine = true
-		return definition
-	end,
-	IndentBlanklineSpaceChar = "IndentBlanklineChar",
 
 	-- lazy.nvim
 	LazyButton = "TabLine",
