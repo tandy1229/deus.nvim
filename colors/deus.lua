@@ -550,6 +550,11 @@ colorscheme.highlight_all({
 	DapBreakpoint = { fg = tandymagenta },
 	DapLogPoint = { fg = tandyblue },
 	DapStopped = "deusGreen",
+
+	-- flash.nvim
+	FlashMatch = { fg = dsdark0, bg = tandypurple },
+	FlashCurrent = { fg = dsdark0, bg = orange },
+	FlashLabel = { fg = dsdark0, bg = tandymagenta },
 })
 
 colorscheme.highlight_terminal({
