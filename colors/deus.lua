@@ -9,6 +9,14 @@ local tandypurple = { "#af87d7", 77, "magenta" }
 local tandyice = { "#75b8c7", 88, "blue" }
 local tandyblue = { "#61bff3", 137, "blue" }
 local tandygray = { "#3e3c3d", 189, "gray" }
+local tandygreen = { "#5cca95", 181, "green" }
+local tandyblack = { "#313b3b", 194, "black" }
+
+-- os color
+
+local apple = { "#9e9e9e", 195, "white" }
+local linux = { "#e84e0f", 196, "orange" }
+local windows = { "#097ed7", 197, "blue" }
 
 -- dracula color for terminal
 local terminal_color_0 = { "#21222C", 100, "black" }
@@ -523,10 +531,10 @@ colorscheme.highlight_all({
 	StatusLineReplace = { fg = dsdark0, bg = red, bold = true },
 	StatusLineCommand = { fg = dsdark0, bg = green, bold = true },
 	StatusLineTerminal = { fg = dsdark0, bg = tandyice, bold = true },
-	StatusLineBranch = { fg = tandyblue, bg = dsdark2, bold = true },
-	StatusLineHunkAdd = { fg = green, bg = dsdark2, bold = true },
-	StatusLineHunkChange = { fg = orange, bg = dsdark2, bold = true },
-	StatusLineHunkRemove = { fg = terminal_color_1, bg = dsdark2, bold = true },
+	StatusLineBranch = { fg = tandygreen, bg = tandyblack, bold = true },
+	StatusLineHunkAdd = { fg = green, bg = tandyblack, bold = true },
+	StatusLineHunkChange = { fg = orange, bg = tandyblack, bold = true },
+	StatusLineHunkRemove = { fg = terminal_color_1, bg = tandyblack, bold = true },
 	StatusLineFormat = { fg = blue, bg = dsdark2 },
 	StatusLineCocStatus = { fg = tandymagenta, bg = dsdark2 },
 	StatusLineFileSize = { fg = tandyice, bg = tandygray },
@@ -534,8 +542,11 @@ colorscheme.highlight_all({
 	StatusLineFileName = { fg = tandyice, bg = dsdark2 },
 	StatusLineInformation = { fg = dslight2, bg = dsdark2, bold = true },
 	StatusLineHint = { fg = tandymagenta, bg = dsdark2, bold = true },
-	StatusLineError = "StatusLineHunkRemove",
-	StatusLineWarning = "StatusLineHunkChange",
+	StatusLineError  = { fg = terminal_color_1, bg = dsdark2, bold = true },
+	StatusLineWarning = { fg = orange, bg = dsdark2, bold = true },
+	StatusLineApple = { fg = apple, bg = dsdark2 },
+	StatusLineLinux = { fg = linux, bg = dsdark2 },
+	StatusLineWindows = { fg = windows, bg = dsdark2 },
 
 	-- ts-rainbow2
 	TSRainbowRed = { fg = red, bold = true, nocombine = true },
