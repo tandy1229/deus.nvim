@@ -15,7 +15,7 @@ local tandyblack = { "#313b3b", 194, "black" }
 -- os color
 
 local apple = { "#9e9e9e", 195, "white" }
-local linux = { "#e84e0f", 196, "orange" }
+local linux = { "#e84e0f", 196, "yellow" }
 local windows = { "#097ed7", 197, "blue" }
 
 -- dracula color for terminal
