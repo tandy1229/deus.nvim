@@ -548,15 +548,6 @@ colorscheme.highlight_all({
 	StatusLineLinux = { fg = linux, bg = dsdark2 },
 	StatusLineWindows = { fg = windows, bg = dsdark2 },
 
-	-- ts-rainbow2
-	TSRainbowRed = { fg = red, bold = true, nocombine = true },
-	TSRainbowYellow = { fg = yellow, bold = true, nocombine = true },
-	TSRainbowBlue = { fg = tandyice, bold = true, nocombine = true },
-	TSRainbowOranage = { fg = orange, bold = true, nocombine = true },
-	TSRainbowGreen = { fg = terminal_color_12, bold = true, nocombine = true },
-	TSRainbowViolet = { fg = terminal_color_10, bold = true, nocombine = true },
-	TSRainbowCyan = { fg = tandypurple, bold = true, nocombine = true },
-
 	-- nvim-dap
 	DapBreakpoint = { fg = tandymagenta },
 	DapLogPoint = { fg = tandyblue },
