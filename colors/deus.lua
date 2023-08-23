@@ -567,7 +567,7 @@ colorscheme.highlight_all({
 
 	DashboardMruTitle = "deusOrangeBold",
 	-- DashboardMruIcon = { fg = tandygreen },
-	DashboardFiles = { fg = blue },
+	DashboardFiles = { fg = aqua, italic = true },
 	DashboardShotCutIcon = { fg = tandygreen },
 })
 
