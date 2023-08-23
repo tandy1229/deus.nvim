@@ -557,6 +557,18 @@ colorscheme.highlight_all({
 	FlashMatch = { fg = dsdark0, bg = tandypurple },
 	FlashCurrent = { fg = dsdark0, bg = orange },
 	FlashLabel = { fg = dsdark0, bg = tandymagenta },
+
+	-- dashboard.nvim
+	DashboardHeader = "deusYellow",
+	DashboardFooter = "deusYellow",
+	DashboardProjectTitle = "deusPurpleBold",
+	-- DashboardProjectTitleIcon = { fg = tandyice },
+	DashboardProjectIcon = { fg = windows },
+
+	DashboardMruTitle = "deusOrangeBold",
+	-- DashboardMruIcon = { fg = tandygreen },
+	DashboardFiles = { fg = blue },
+	DashboardShotCutIcon = { fg = tandygreen },
 })
 
 colorscheme.highlight_terminal({
