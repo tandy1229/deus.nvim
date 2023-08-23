@@ -70,8 +70,8 @@ highlite.group = vim.api.nvim_get_hl and
 	--- @param name string the name of the highlight group
 	--- @return highlite.group.new definition an nvim-highlite compliant table describing the highlight group `name`
 	function(name)
-		local ok, definition = pcall(vim.api.nvim_get_hl_by_name, name, true)
-		local _, cterm = pcall(vim.api.nvim_get_hl_by_name, name, false)
+		local ok, definition = pcall(vim.api.nvim_get_hl, 0, {link = true, name = name})
+		local _, cterm = pcall(vim.api.nvim_get_hl, 0, {link = false, name = name})
 
 		if not ok then
 			return {}
