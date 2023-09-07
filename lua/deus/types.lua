@@ -58,3 +58,5 @@
 --- @field underdotted? boolean
 --- @field underdouble? boolean
 --- @field underline? boolean
+--- @field light? nil
+--- @field dark? nil
