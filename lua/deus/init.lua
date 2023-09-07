@@ -3,7 +3,7 @@
 --[[/* Vars */]]
 
 --- Which set of colors to use.
-local USE_256 = tonumber(vim.api.nvim_get_option 't_Co') > 255 or vim.uv.os_getenv('TERM'):find '256'
+local USE_256 = tonumber(vim.api.nvim_get_option("t_Co")) > 255 or vim.uv.os_getenv("TERM"):find("256")
 
 --- Which index to use for `cterm` highlights.
 local PALETTE_CTERM = USE_256 and 2 or 3
@@ -22,11 +22,11 @@ local function resolve(groups, key, resolve_links) -- {{{
 	local original_group = rawget(groups, key)
 	local original_group_type = type(original_group)
 
-	if original_group_type == 'function' then
+	if original_group_type == "function" then
 		local resolved = original_group(setmetatable({}, {
 			__index = function(_, inner_key)
 				return resolve(groups, inner_key, true)
-			end
+			end,
 		}))
 
 		-- PERF: assign the result of the function call to its associated index so that
@@ -35,7 +35,7 @@ local function resolve(groups, key, resolve_links) -- {{{
 
 		return resolved
 	elseif resolve_links then
-		if original_group_type == 'string' then
+		if original_group_type == "string" then
 			return resolve(groups, original_group, resolve_links)
 		elseif original_group.link then
 			return resolve(groups, original_group.link, resolve_links)
@@ -51,53 +51,53 @@ end -- }}}
 --- @class highlite
 local highlite = {}
 
-highlite.group = vim.api.nvim_get_hl and
+highlite.group = vim.api.nvim_get_hl
 		--- @param name string the name of the highlight group
 		--- @param link boolean if `true`, return highlight links instead of the true definition
 		--- @return highlite.group.new definition an nvim-highlite compliant table describing the highlight group `name`
-		function(name, link)
+		and function(name, link)
 			link = link or false
 
 			local definition = vim.api.nvim_get_hl(0, { link = link, name = name })
 
 			if not link then
-				for gui, cterm in pairs { bg = 'ctermbg', fg = 'ctermfg', sp = vim.NIL } do
+				for gui, cterm in pairs({ bg = "ctermbg", fg = "ctermfg", sp = vim.NIL }) do
 					definition[gui] = { [PALETTE_CTERM] = definition[cterm], [PALETTE_HEX] = definition[gui] }
 					definition[cterm] = nil
 				end
 			end
 
 			return definition
-		end or
-		--- @param name string the name of the highlight group
-		--- @return highlite.group.new definition an nvim-highlite compliant table describing the highlight group `name`
-		function(name)
-			local ok, definition = pcall(vim.api.nvim_get_hl, 0, { link = true, name = name })
-			local _, cterm = pcall(vim.api.nvim_get_hl, 0, { link = false, name = name })
-
-			if not ok then
-				return {}
-			end
-
-			for input, output in pairs { background = 'bg', foreground = 'fg', special = 'sp' } do
-				local definition_input = definition[input]
-				if definition_input then
-					definition[output] = { [PALETTE_CTERM] = cterm[input], [PALETTE_HEX] = definition_input }
-					definition[input] = nil
-				end
-			end
-
-			return definition
 		end
+	--- @param name string the name of the highlight group
+	--- @return highlite.group.new definition an nvim-highlite compliant table describing the highlight group `name`
+	or function(name)
+		local ok, definition = pcall(vim.api.nvim_get_hl, 0, { link = true, name = name })
+		local _, cterm = pcall(vim.api.nvim_get_hl, 0, { link = false, name = name })
+
+		if not ok then
+			return {}
+		end
+
+		for input, output in pairs({ background = "bg", foreground = "fg", special = "sp" }) do
+			local definition_input = definition[input]
+			if definition_input then
+				definition[output] = { [PALETTE_CTERM] = cterm[input], [PALETTE_HEX] = definition_input }
+				definition[input] = nil
+			end
+		end
+
+		return definition
+	end
 
 --- `nvim_set_hl` using the `name` and `definition`
 --- @param name string the name of the highlight group
 --- @param definition highlite.group.definition a link or an attribute map
 function highlite.highlight(name, definition) -- {{{
-	local highlight = {}                        --- @type highlite.group.nvim_api
-	if type(definition) == 'string' then        -- `definition` is a shorthand link; most common
+	local highlight = {} --- @type highlite.group.nvim_api
+	if type(definition) == "string" then -- `definition` is a shorthand link; most common
 		highlight.link = definition
-	elseif not definition.link then             -- `definition` is a new group; second-most common
+	elseif not definition.link then -- `definition` is a new group; second-most common
 		for k, v in pairs(definition) do
 			highlight[k] = v
 		end
@@ -106,7 +106,7 @@ function highlite.highlight(name, definition) -- {{{
 		highlight.dark = nil
 		highlight.light = nil
 
-		local background = vim.api.nvim_get_option 'background' --- @type 'light'|'dark'
+		local background = vim.api.nvim_get_option("background") --- @type 'light'|'dark'
 		local background_definition = definition[background]
 		if background_definition then
 			for k, v in pairs(background_definition) do
@@ -140,9 +140,10 @@ end
 --- @param terminal_colors highlite.color.definition[] a list 1..16 of colors to use in the terminal
 function highlite.highlight_terminal(terminal_colors)
 	for index, color in ipairs(terminal_colors) do
-		vim.api.nvim_set_var('terminal_color_' .. (index - 1), color[
-		vim.api.nvim_get_option 'termguicolors' and PALETTE_HEX or PALETTE_CTERM
-		])
+		vim.api.nvim_set_var(
+			"terminal_color_" .. (index - 1),
+			color[vim.api.nvim_get_option("termguicolors") and PALETTE_HEX or PALETTE_CTERM]
+		)
 	end
 end
 
