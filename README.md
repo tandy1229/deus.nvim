@@ -35,7 +35,7 @@
 
 ## Prerequisites
 
-Neovim 0.7+
+Neovim 0.10 or Neovim nightly
 
 ## Installation
 
