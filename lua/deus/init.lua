@@ -5,7 +5,8 @@ local api, uv = vim.api, vim.uv
 --[[/* Vars */]]
 
 --- Which set of colors to use.
-local USE_256 = tonumber(api.nvim_get_option("t_Co")) > 255 or uv.os_getenv("TERM"):find("256")
+-- local USE_256 = tonumber(api.nvim_get_option_value("t_Co", {})) > 255 or uv.os_getenv("TERM"):find("256")
+local USE_256 = uv.os_getenv("TERM"):find("256")
 
 --- Which index to use for `cterm` highlights.
 local PALETTE_CTERM = USE_256 and 2 or 3
@@ -108,7 +109,7 @@ function highlite.highlight(name, definition) -- {{{
 		highlight.dark = nil
 		highlight.light = nil
 
-		local background = api.nvim_get_option("background") --- @type 'light'|'dark'
+		local background = api.nvim_get_option_value("background", {}) --- @type 'light'|'dark'
 		local background_definition = definition[background]
 		if background_definition then
 			for k, v in pairs(background_definition) do
@@ -144,7 +145,7 @@ function highlite.highlight_terminal(terminal_colors)
 	for index, color in ipairs(terminal_colors) do
 		api.nvim_set_var(
 			"terminal_color_" .. (index - 1),
-			color[api.nvim_get_option("termguicolors") and PALETTE_HEX or PALETTE_CTERM]
+			color[api.nvim_get_option_value("termguicolors", {}) and PALETTE_HEX or PALETTE_CTERM]
 		)
 	end
 end
