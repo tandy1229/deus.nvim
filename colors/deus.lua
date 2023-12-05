@@ -117,6 +117,7 @@ colorscheme.highlight_all({
 	Bold = { bold = true },
 	Italic = { italic = true },
 	Normal = { fg = fg1, bg = bg0 },
+	NormalFloat = { fg = fg1, bg = bg0 },
 	Title = "Bold",
 	Underlined = { fg = blue, underline = true },
 	Whitespace = "NonText",
