@@ -295,6 +295,9 @@ colorscheme.highlight_all({
 	PmenuThumb = { bg = bg4 },
 	WildMenu = { fg = tandypurple, bg = bg2, bold = true, reverse = true },
 
+	-- Winbar
+	WinBar = { bold = true },
+
 	-- Folds
 	FoldColumn = { fg = gray, bg = bg2, bold = true },
 	Folded = { fg = gray, bg = bg2, italic = true },
@@ -569,6 +572,13 @@ colorscheme.highlight_all({
 	-- DashboardMruIcon = { fg = tandygreen },
 	DashboardFiles = { fg = aqua, italic = true },
 	DashboardShotCutIcon = { fg = tandygreen },
+
+	-- dropbar
+	-- DropBarCurrentContext = { bg = bg2 },
+	-- -- DropBarFzfMatch = { link = 'TelescopeMatching' },
+	-- DropBarHover = { bg = bg2 },
+	-- DropBarIconCurrentContext = { bg = bg2 },
+
 })
 
 colorscheme.highlight_terminal({
